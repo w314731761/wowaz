@@ -15,6 +15,9 @@ mkdir dev
 ```
 进入 cd dev  后拉取编译文件
 ```
+cd dev
+```
+```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
 安装MOD插件
