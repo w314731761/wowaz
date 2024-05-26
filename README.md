@@ -33,6 +33,7 @@ git clone https://github.com/azerothcore/mod-anticheat.git  #防作弊模块
 git clone https://github.com/azerothcore/mod-learn-spells.git  #升级后自动学习法术,无需访问训练师
 git clone https://github.com/azerothcore/mod-npc-buffer.git  #buff大师
 git clone https://github.com/azerothcore/mod-npc-beastmaster.git  #猎人宠物大师
+git clone https://github.com/trickerer/Trinity-Bots.git  添加机器人
 ```
 完成后进入 azerothcore-wotlk
 ```
