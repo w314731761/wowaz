@@ -13,16 +13,16 @@ sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysq
 ```
 
 
-###在用户目录下 创建一个目录输入 mkdir dev 用于存放代码
+在用户目录下 创建一个目录输入 mkdir dev 用于存放代码
 
 ```
 mkdir dev
 ```
-##进入 cd dev  后拉取编译文件
+进入 cd dev  后拉取编译文件
 ```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
-7.开始编译代码  完成后进入 cd azerothcore
+开始编译代码  完成后进入 cd azerothcore
 ```
 cd azerothcore
 ```
@@ -37,7 +37,7 @@ cd build
 ```
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 ```
-9.开始编译 
+开始编译 
 先检查服务器 核心数 make -j 4  （4代表核心数）
 ```
 nproc --all
@@ -45,10 +45,16 @@ nproc --all
 ```
 make -j 4 
 ```
+编译完成后输入make install
+```
+make install
+```
+下载  data 文件
+网址
+```
+https://github.com/wowgaming/client-data/releases/
+```
 
-10. 编译完成后输入make install
-
-11.下载  data 网址https://github.com/wowgaming/client-data/releases/
 12.cd /home/wp/azeroth-server/etc
 13.进入cd etc目录进行如下操作复制文件
 
