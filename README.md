@@ -289,6 +289,12 @@ screen -ls
 screen -r authserver
 screen -r worldserver   下  accunt create 用户 密码
 
+以上任意一个方法启动服务器后可以启动SQL管理工具
+如heidisql下输入你的ip 账户密码 端口3306
+进入acore_auth下的realmlist修改以下内容
+name为你的服务器名称
+address为你的服务器ip或者域名
+
 
 
 
