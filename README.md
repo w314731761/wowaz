@@ -1,9 +1,15 @@
 ###虚拟机或者实体机安装ubuntu-22.04.2
+
 ###远程ssh连接至ubuntu
+
 ###安装1pan或者宝塔面板(推荐宝塔）
+
 ###进入网站https://www.azerothcore.org/wiki/linux-requirements 安装数据库依赖 Ubuntu with MySQL 8.x   安装时间预计和你的网速相关.
+
 ###点击 Step 2: Core Installation 进入下一步
+
 ###在用户目录下 创建一个目录输入 mkdir dev 用于存放代码
+
 ##进入 cd dev  后拉取编译文件 
 
 git clone https://github.com/azerothcore/azerothcore-wotlk.git
