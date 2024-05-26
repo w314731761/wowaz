@@ -177,6 +177,10 @@ account set gmlevel 帐号 3 -1
 ```
 以上启动方法启动后关闭窗口
 后台运行服务器
+服务器启动需要在以下目录运行
+```
+cd azeroth-server/bin/
+```
 第一种
 # 1. 以 nohup 方式启动，标准输出和错误输出都重定向到 /dev/null
 # 2. 启动前检查是否有 Auth.log/DBErrors.log/Server.log，如果有先备份，格式为 log/YYMMDD_HHMMSS/原文件名.log
@@ -207,22 +211,31 @@ launch worldserver
 ```
 
 
-快速启动方法
-vim statr.sh  #创建启动文本  复制以下内容到文件中
+快速启动方法  创建启动文本  复制以下内容到文件中
+```
+vim y.sh
+```
+```
 function launch() {
 	nohup ./$1 > /dev/null 2>&1 &
 }
 launch authserver
 launch worldserver
-
-vim stop.sh   #创建关闭文本  复制以下内容到文件中
+```
+创建关闭文本  复制以下内容到文件中
+```
+vim n.sh
+```
+```
 pkill authserver
 pkill worldserver
-
-chmod +x *.sh  #给文件添加执行权限
-
-./start.sh   #启动
-./stop.sh  #关闭
+```
+给文件添加执行权限
+```
+chmod +x *.sh
+```
+./y.sh  #启动
+./n.sh  #关闭
 
 
 
