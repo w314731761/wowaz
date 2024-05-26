@@ -210,13 +210,16 @@ launch authserver
 launch worldserver
 ```
 
-快速启动方法  创建启动文本  复制以下内容到文件中
+快速启动方法
+进入bin目录
 ```
 cd azeroth-server/bin/
 ```
+创建启动文本
 ```
 vim y.sh
 ```
+按i复制以下内容到文件中
 ```
 function launch() {
 	nohup ./$1 > /dev/null 2>&1 &
@@ -224,10 +227,11 @@ function launch() {
 launch authserver
 launch worldserver
 ```
-创建关闭文本  复制以下内容到文件中
+创建关闭文本
 ```
 vim n.sh
 ```
+复制以下内容到文件中
 ```
 pkill authserver
 pkill worldserver
