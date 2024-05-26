@@ -26,9 +26,13 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
 cd ~/dev/azerothcore-wotlk/modules
 ```
-克隆 mod 代码，以 mod-eluna 为例，其他 mod 也是类似的操作
+克隆 mod 代码，其他 mod 也是类似的操作
 ```
-git clone https://github.com/azerothcore/mod-eluna.git
+git clone https://github.com/azerothcore/mod-eluna.git  #lua脚本模块
+git clone https://github.com/azerothcore/mod-anticheat.git  #防作弊模块
+git clone https://github.com/azerothcore/mod-learn-spells.git  #升级后自动学习法术,无需访问训练师
+git clone https://github.com/azerothcore/mod-npc-buffer.git  #buff大师
+git clone https://github.com/azerothcore/mod-npc-beastmaster.git  #猎人宠物大师
 ```
 完成后进入 azerothcore-wotlk
 ```
