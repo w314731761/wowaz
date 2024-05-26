@@ -10,6 +10,8 @@
 
 ###在用户目录下 创建一个目录输入 mkdir dev 用于存放代码
 
+mkdir dev
+
 ##进入 cd dev  后拉取编译文件 
 
 git clone https://github.com/azerothcore/azerothcore-wotlk.git
