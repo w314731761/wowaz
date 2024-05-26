@@ -15,7 +15,9 @@ sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysq
 
 ###在用户目录下 创建一个目录输入 mkdir dev 用于存放代码
 
-```mkdir dev```
+```
+mkdir dev
+```
 
 ##进入 cd dev  后拉取编译文件 
 
