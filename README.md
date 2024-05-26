@@ -181,9 +181,9 @@ account set gmlevel 帐号 3 -1
 ```
 cd azeroth-server/bin/
 ```
-第一种
-# 1. 以 nohup 方式启动，标准输出和错误输出都重定向到 /dev/null
-# 2. 启动前检查是否有 Auth.log/DBErrors.log/Server.log，如果有先备份，格式为 log/YYMMDD_HHMMSS/原文件名.log
+#第一种
+>1. 以 nohup 方式启动，标准输出和错误输出都重定向到 /dev/null
+>2. 启动前检查是否有 Auth.log/DBErrors.log/Server.log，如果有先备份，格式为 log/YYMMDD_HHMMSS/原文件名.log
 ```
 function backupLog() {
 	# 把log/YYMMDD_HHMMSS目录名存到一个变量里
@@ -255,7 +255,7 @@ cd azeroth-server/bin/
 ```
 以上这种快速启动方法启动后无法进入AC后台所以需要优先创建GM账号进行之后的操作
 
-第二种启动服务器方法
+#第二种启动服务器方法
 安装 screen
 ```
 sudo apt install screen
@@ -284,7 +284,7 @@ cd ~/azeroth-server/bin
 ```
 screen -ls
 ```
-# 进入 screen 会话
+进入 screen 会话
 ```
 screen -r authserver
 ```
