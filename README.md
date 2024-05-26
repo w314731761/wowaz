@@ -30,9 +30,9 @@ cd ~/dev/azerothcore-wotlk/modules
 ```
 git clone https://github.com/azerothcore/mod-eluna.git
 ```
-完成后进入 cd azerothcore
+完成后进入 azerothcore-wotlk
 ```
-cd azerothcore
+cd dev/azerothcore-wotlk/
 ```
 创建  mkdir build 进入
 ```
