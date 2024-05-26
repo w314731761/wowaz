@@ -237,10 +237,11 @@ pkill worldserver
 chmod +x *.sh
 ```
 以下是快速启动项目
-启动服务器进入
+进入以下目录
 ```
 cd azeroth-server/bin/
 ```
+启动服务器
 ```
 ./y.sh
 ```
@@ -248,7 +249,7 @@ cd azeroth-server/bin/
 ```
 ./n.sh
 ```
-
+以上这种快速启动方法启动后无法进入AC后台所以需要优先创建GM账号进行之后的操作
 
 
 
