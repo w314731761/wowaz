@@ -30,10 +30,6 @@ cd ~/dev/azerothcore-wotlk/modules
 ```
 git clone https://github.com/azerothcore/mod-eluna.git
 ```
-进入 build 目录
-```
-cd ../build
-```
 完成后进入 cd azerothcore
 ```
 cd azerothcore
