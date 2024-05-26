@@ -102,12 +102,12 @@ sudo apt-get install unzip
 ```
 cd /home/wp/azeroth-server/etc
 ```
-修改 authserver.conf 可以修改数据库账户和密码
-
 worldserver.conf 下修改DataDir = "."
-为你的data目录
-如DataDir = "/home/wp/azeroth-server/data"
-
+为你的data目录  在宝塔下操作更方便
+如DataDir = "/home/wp/azeroth-server/data" 修改命令
+```
+sudo vi worldserver.conf
+```
 执行 sudo mysql 进入数据库的终端
 ```
 sudo mysql
