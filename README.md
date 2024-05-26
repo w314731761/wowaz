@@ -294,9 +294,14 @@ screen -r worldserver
 #以上任意一个方法启动服务器后可以启动SQL管理工具如heidisql下输入你的ip 账户密码 端口3306进入acore_auth下的realmlist修改以下内容
 name为你的服务器名称
 address为你的服务器ip或者域名
-#服务端配置文件
+
+#服务端配置文件home/wp/azeroth-server/etc/目录下面修改
 worldserver.conf
-https://github.com/najoast/acore_doc/blob/master/doc/worldserver.conf.md 修改文档
+修改服务器相关参数
+
+中英对照表
+https://github.com/najoast/acore_doc/blob/master/doc/worldserver.conf.md
+感谢najoast大神的翻译
 
 
 
