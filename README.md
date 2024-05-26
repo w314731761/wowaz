@@ -236,8 +236,18 @@ pkill worldserver
 ```
 chmod +x *.sh
 ```
-./y.sh  #启动
-./n.sh  #关闭
+以下是快速启动项目
+启动服务器进入
+```
+cd azeroth-server/bin/
+```
+```
+./y.sh
+```
+关闭服务器
+```
+./n.sh
+```
 
 
 
