@@ -201,7 +201,7 @@ backupLog Auth
 backupLog DBErrors
 backupLog Server
 ```
-# 启动服务器
+启动服务器
 ```
 function launch() {
 	nohup ./$1 > /dev/null 2>&1 &
