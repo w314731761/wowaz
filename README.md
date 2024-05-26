@@ -155,10 +155,32 @@ sudo systemctl restart mysql
 ```
 打开 heidisql 、进行服务器连接
 
-以下是启动服务器
+以下是启动服务器  进入
+```
+cd azeroth-server/bin/
+
+```
+启动 authserver worldserver 两个窗口分别运行
+```
+./authserver
+```
+```
+./worldserver
+```
+worldserver 窗口下创建账户并提升权限
+AC下输入
+```
+account create  账户 密码
+```
+```
+account set gmlevel 帐号 3 -1
+```
+以上启动方法启动后关闭窗口
+后台运行服务器
 第一种
 # 1. 以 nohup 方式启动，标准输出和错误输出都重定向到 /dev/null
 # 2. 启动前检查是否有 Auth.log/DBErrors.log/Server.log，如果有先备份，格式为 log/YYMMDD_HHMMSS/原文件名.log
+```
 function backupLog() {
 	# 把log/YYMMDD_HHMMSS目录名存到一个变量里
 	dirName=log/`date +%y%m%d_%H%M%S`
@@ -174,13 +196,15 @@ function backupLog() {
 backupLog Auth
 backupLog DBErrors
 backupLog Server
-
+```
 # 启动服务器
+```
 function launch() {
 	nohup ./$1 > /dev/null 2>&1 &
 }
 launch authserver
 launch worldserver
+```
 
 
 快速启动方法
@@ -241,31 +265,6 @@ screen -r worldserver   下  accunt create 用户 密码
 服务端配置文件
 worldserver.conf
 https://github.com/najoast/acore_doc/blob/master/doc/worldserver.conf.md 修改文档
-
-
-MOD插件编译
-https://github.com/najoast/acore_doc/blob/master/doc/linux_compile_mod.md
-
-
-# 1. 进入代码的 modules 目录
-cd ~/dev/azerothcore-wotlk/modules
-
-# 2. 克隆 mod 代码，以 mod-eluna 为例，其他 mod 也是类似的操作
-git clone https://github.com/azerothcore/mod-eluna.git
-
-# 3. 进入 build 目录
-cd ../build
-
-# 4. 重新 cmake 生成 Makefile
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
-
-# 5. 编译
-make -j 4     (nproc --all)
-
-# 6. 安装
-make install
-
-
 
 
 
