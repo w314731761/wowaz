@@ -3,12 +3,6 @@
 > 远程ssh连接至ubuntu
 > 安装1pan或者宝塔面板(推荐宝塔）
 > 进入网站 https://www.azerothcore.org/wiki/linux-requirements 安装数据库依赖 Ubuntu with MySQL 8.x
-> 下载 data 文件
-网址
-```
-https://github.com/wowgaming/client-data/releases/
-```
-
 ```
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
@@ -50,33 +44,63 @@ make -j 4
 ```
 make install
 ```
-
-
+进入cd etc目录
+```
 cd /home/wp/azeroth-server/etc
-13.进入cd etc目录进行如下操作复制文件
-
+```
+复制文件
+```
 cp authserver.conf.dist authserver.conf
 cp worldserver.conf.dist worldserver.conf
-
-14. cd /home/wp/azeroth-server
+```
+下载 data 文件 网址
+```
+https://github.com/wowgaming/client-data/releases/
+```
+进入 azeroth-server
+```
+cd /home/wp/azeroth-server
+```
 进入后创建data目录
+```
 mkdir data
-
-15.    cd /home/wp/azeroth-server/data
+```
+进入data目录
+```
+cd /home/wp/azeroth-server/data
+```
 面板下进入该目录上传data包
 
-16. sudo chown wp:wp data.zip 给包权限(没有权限的情况下操作)
-解压该包unzip data.zip 无法解压 
-安装sudo apt-get install unzip
-解压后面板下删除 data包
+给包权限(没有权限的情况下操作) 如有权限可以跳过
+```
+sudo chown wp:wp data.zip
+```
+解压该包
+```
+unzip data.zip
+```
+无法解压 的情况下安装 如可以解压可以跳过
+```
+sudo apt-get install unzip
+```
+解压后面板下删除 data 包
 
-17.进入cd /home/wp/azeroth-server/etc目录 修改 authserver.conf 可以修改数据库账户和密码
+进入etc目录
+```
+cd /home/wp/azeroth-server/etc
+```
+修改 authserver.conf 可以修改数据库账户和密码
+
 worldserver.conf 下修改DataDir = "."
 为你的data目录
 如DataDir = "/home/wp/azeroth-server/data"
 
-18. 执行 sudo mysql 进入数据库的终端
+执行 sudo mysql 进入数据库的终端
+```
+sudo mysql
+```
 执行以下SQL语句，创建acore用户，创建acore_world、acore_characters、acore_auth三个数据库，并授权acore用户拥有这三个数据库的所有权限
+```
 DROP USER IF EXISTS 'acore'@'%';
 CREATE USER 'acore'@'%' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
 
@@ -94,24 +118,28 @@ CREATE DATABASE `acore_auth` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_gener
 GRANT ALL PRIVILEGES ON `acore_world` . * TO 'acore'@'%' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON `acore_characters` . * TO 'acore'@'%' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON `acore_auth` . * TO 'acore'@'%' WITH GRANT OPTION;
-
-查看是否创建成功
-Mysql> show databases;
-
+```
+Mysql下查看是否创建成功
+```
+show databases;
+```
 Root权限进入 sudo vi /etc/mysql/mysql.conf.d 或者 使用宝塔文件浏览器，进入 /etc/mysql/mysql.conf.d 目录修改 mysqld.cnf 文件，把 
+按i开始进行编辑
 bind-address            = 0.0.0.0
 mysqlx-bind-address     = 0.0.0.0
 修改后按ESC 后输入 :wq 退出
 
-打开Ubuntu 防火墙打开3306端口
+打开Ubuntu 防火墙打开3306，3724，8085端口
+```
 sudo ufw allow 3306
 sudo ufw allow 3724
 sudo ufw allow 8085
+```
 
-
-在终端输入 
-sudo systemctl restart mysql 重启MySQL服务
-
+在终端重启MySQL服务
+```
+sudo systemctl restart mysql
+```
 打开 heidisql 、进行服务器连接
 
 以下是启动服务器
