@@ -255,50 +255,46 @@ cd azeroth-server/bin/
 ```
 以上这种快速启动方法启动后无法进入AC后台所以需要优先创建GM账号进行之后的操作
 
-
-
-
-
-第二种
-
-# 安装 screen
+第二种启动服务器方法
+安装 screen
+```
 sudo apt install screen
-
-# 创建 authserver screen 会话
+```
+创建 authserver screen 会话
+```
 screen -S authserver
-
-# 启动 authserver
+```
+启动 authserver
+```
 cd ~/azeroth-server/bin
 ./authserver
-
-# 按 Ctrl+A Ctrl+D 退出 screen 会话
-
-# 创建 worldserver screen 会话
+```
+按 Ctrl+A Ctrl+D 退出 screen 会话
+创建 worldserver screen 会话
+```
 screen -S worldserver
-
-# 启动 worldserver
+```
+启动 worldserver
+```
 cd ~/azeroth-server/bin
 ./worldserver
-
-# 按 Ctrl+A Ctrl+D 退出 screen 会话
-
-# 查看 screen 会话
+```
+按 Ctrl+A Ctrl+D 退出 screen 会话
+查看 screen 会话
+```
 screen -ls
-
+```
 # 进入 screen 会话
+```
 screen -r authserver
-screen -r worldserver   下  accunt create 用户 密码
-
-以上任意一个方法启动服务器后可以启动SQL管理工具
-如heidisql下输入你的ip 账户密码 端口3306
-进入acore_auth下的realmlist修改以下内容
+```
+```
+screen -r worldserver
+```
+#以上任意一个方法启动服务器后可以启动SQL管理工具如heidisql下输入你的ip 账户密码 端口3306进入acore_auth下的realmlist修改以下内容
 name为你的服务器名称
 address为你的服务器ip或者域名
-
-
-
-
-服务端配置文件
+#服务端配置文件
 worldserver.conf
 https://github.com/najoast/acore_doc/blob/master/doc/worldserver.conf.md 修改文档
 
