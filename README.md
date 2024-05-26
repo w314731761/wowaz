@@ -303,5 +303,11 @@ worldserver.conf
 https://github.com/najoast/acore_doc/blob/master/doc/worldserver.conf.md
 感谢najoast大神的翻译
 
+/azeroth-server/bin/lua_scripts为lua脚本存放处 
+eluna重启命令 游戏内使用
+```
+.reload eluna
+```
+
 
 
