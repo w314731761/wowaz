@@ -38,14 +38,14 @@ cd build
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 ```
 9.开始编译 
-先检查服务器 核心数
+先检查服务器 核心数 make -j 4  （4代表核心数）
 ```
 nproc --all
 ```
 ```
 make -j 4 
 ```
-# 4 代表核心数
+
 10. 编译完成后输入make install
 
 11.下载  data 网址https://github.com/wowgaming/client-data/releases/
