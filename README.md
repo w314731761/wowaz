@@ -175,8 +175,8 @@ account create  账户 密码
 ```
 account set gmlevel 帐号 3 -1
 ```
-以上启动方法启动后关闭窗口
-后台运行服务器
+以上启动方法启动后关闭窗口后台运行服务器
+
 服务器启动需要在以下目录运行
 ```
 cd azeroth-server/bin/
@@ -210,8 +210,10 @@ launch authserver
 launch worldserver
 ```
 
-
 快速启动方法  创建启动文本  复制以下内容到文件中
+```
+cd azeroth-server/bin/
+```
 ```
 vim y.sh
 ```
