@@ -17,7 +17,21 @@ mkdir dev
 ```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
-开始编译代码  完成后进入 cd azerothcore
+安装MOD插件
+
+进入代码的 modules 目录
+```
+cd ~/dev/azerothcore-wotlk/modules
+```
+克隆 mod 代码，以 mod-eluna 为例，其他 mod 也是类似的操作
+```
+git clone https://github.com/azerothcore/mod-eluna.git
+```
+进入 build 目录
+```
+cd ../build
+```
+完成后进入 cd azerothcore
 ```
 cd azerothcore
 ```
