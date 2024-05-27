@@ -197,8 +197,7 @@ account set gmlevel 帐号 3 -1
 cd ~/azeroth-server/bin/
 ```
 #第一种
->1. 以 nohup 方式启动，标准输出和错误输出都重定向到 /dev/null
->2. 启动前检查是否有 Auth.log/DBErrors.log/Server.log，如果有先备份，格式为 log/YYMMDD_HHMMSS/原文件名.log
+以 nohup 方式启动
 ```
 function backupLog() {
 	dirName=log/`date +%y%m%d_%H%M%S`
