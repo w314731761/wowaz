@@ -45,15 +45,16 @@ mkdir build
 ```
 cd build
 ```
-build目录下输入编译信息
+build目录下输入配置 CMake 以构建项目编译信息
 ```
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 ```
-开始编译 
+开始编译前
 先检查服务器 核心数 make -j 4  （4代表核心数）
 ```
 nproc --all
 ```
+开始进行编译
 ```
 make -j 4 
 ```
