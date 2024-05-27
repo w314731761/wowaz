@@ -33,12 +33,12 @@ git clone https://github.com/azerothcore/mod-anticheat.git  #防作弊模块
 git clone https://github.com/azerothcore/mod-chat-transmitter  #mod-chat聊天发送器
 git clone https://github.com/azerothcore/mod-who-logged.git  #玩家登录提示
 git clone https://github.com/azerothcore/mod-multi-client-check.git  #多客户端检查 
-git clone https://github.com/ZhengPeiRu21/mod-challenge-modes.git  #一命通关 
 git clone https://github.com/azerothcore/mod-ip-tracker.git  #ip 跟踪器
 git clone https://github.com/azerothcore/mod-aoe-loot.git  #AOE一键拾取
 git clone https://github.com/azerothcore/mod-learn-spells.git  #升级后自动学习法术,无需访问训练师
 git clone https://github.com/azerothcore/mod-npc-buffer.git  #buff大师
 git clone https://github.com/azerothcore/mod-npc-beastmaster.git  #猎人宠物大师
+git clone https://github.com/ZhengPeiRu21/mod-challenge-modes.git  #一命通关 
 ```
 完成后进入 azerothcore-wotlk
 ```
