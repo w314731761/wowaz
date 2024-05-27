@@ -195,13 +195,10 @@ cd ~/azeroth-server/bin/
 >2. 启动前检查是否有 Auth.log/DBErrors.log/Server.log，如果有先备份，格式为 log/YYMMDD_HHMMSS/原文件名.log
 ```
 function backupLog() {
-	# 把log/YYMMDD_HHMMSS目录名存到一个变量里
 	dirName=log/`date +%y%m%d_%H%M%S`
-	# 判断 dirName 目录是否存在，不存在则创建
 	if [ ! -d $dirName ]; then
 		mkdir -p $dirName
 	fi
-	# 判断 $1.log 是否存在，存在则备份
 	if [ -f $1.log ]; then
 		mv $1.log $dirName/$1.log
 	fi
