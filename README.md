@@ -22,7 +22,7 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
 先安装MOD插件
 
-进入代码的 modules 目录
+进入 modules 目录
 ```
 cd ~/dev/azerothcore-wotlk/modules
 ```
