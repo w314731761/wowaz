@@ -2,8 +2,7 @@
 > 虚拟机或者实体机安装ubuntu-22.04.2
 > 远程ssh连接至ubuntu
 > 安装1pan或者宝塔面板(推荐宝塔）
-> wp为我的用户名，每个人可能不一样。
-> 进入网站 https://www.azerothcore.org/wiki/linux-requirements 安装数据库依赖 Ubuntu with MySQL 8.x  以下为代码
+> 相关编译说明可以进入网站 https://www.azerothcore.org/wiki/linux-requirements 安装数据库依赖 Ubuntu with MySQL 8.x  以下为代码
 ```
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
