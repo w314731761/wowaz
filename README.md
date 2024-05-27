@@ -161,7 +161,7 @@ sudo systemctl restart mysql
 
 以下是启动服务器  进入
 ```
-cd azeroth-server/bin/
+cd ~/azeroth-server/bin/
 
 ```
 启动 authserver worldserver 两个窗口分别运行
