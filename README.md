@@ -12,14 +12,14 @@ sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysq
 ```
 mkdir dev
 ```
-进入 cd dev  后拉取编译文件
+进入  dev  后拉取编译文件
 ```
 cd dev
 ```
 ```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
-安装MOD插件
+先安装MOD插件
 
 进入代码的 modules 目录
 ```
@@ -35,16 +35,16 @@ git clone https://github.com/azerothcore/mod-npc-beastmaster.git  #猎人宠物�
 ```
 完成后进入 azerothcore-wotlk
 ```
-cd dev/azerothcore-wotlk/
+cd ~/dev/azerothcore-wotlk/
 ```
-创建  mkdir build 进入
+创建 build 并进入build
 ```
 mkdir build
 ```
 ```
 cd build
 ```
-build目录下输入 
+build目录下输入编译信息
 ```
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 ```
@@ -56,13 +56,13 @@ nproc --all
 ```
 make -j 4 
 ```
-编译完成后输入make install
+编译完成后输入make install进行安装
 ```
 make install
 ```
 进入cd etc目录
 ```
-cd /home/wp/azeroth-server/etc
+cd ~/azeroth-server/etc
 ```
 复制文件
 ```
@@ -75,7 +75,7 @@ https://github.com/wowgaming/client-data/releases/
 ```
 进入 azeroth-server
 ```
-cd /home/wp/azeroth-server
+cd ~/azeroth-server/
 ```
 进入后创建data目录
 ```
@@ -83,13 +83,13 @@ mkdir data
 ```
 进入data目录
 ```
-cd /home/wp/azeroth-server/data
+cd ~/azeroth-server/data
 ```
 面板下进入该目录上传data包
 
 给包权限(没有权限的情况下操作) 如有权限可以跳过
 ```
-sudo chown wp:wp data.zip
+sudo chown wp:wp data.zip  #wp为你的用户权限
 ```
 解压该包
 ```
@@ -103,7 +103,7 @@ sudo apt-get install unzip
 
 进入etc目录
 ```
-cd /home/wp/azeroth-server/etc
+cd ~/azeroth-server/etc
 ```
 worldserver.conf 下修改DataDir = "."
 为你的data目录  在宝塔下操作更方便
