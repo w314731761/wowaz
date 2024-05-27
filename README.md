@@ -183,7 +183,7 @@ account set gmlevel 帐号 3 -1
 
 服务器启动需要在以下目录运行
 ```
-cd azeroth-server/bin/
+cd ~/azeroth-server/bin/
 ```
 #第一种
 >1. 以 nohup 方式启动，标准输出和错误输出都重定向到 /dev/null
@@ -217,7 +217,7 @@ launch worldserver
 快速启动方法
 进入bin目录
 ```
-cd azeroth-server/bin/
+cd ~/azeroth-server/bin/
 ```
 创建启动文本
 ```
