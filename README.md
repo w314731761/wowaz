@@ -229,7 +229,7 @@ cd ~/azeroth-server/bin/
 ```
 创建启动文本
 ```
-vim 启动名称.sh
+vim start.sh  #可以自定义名称
 ```
 按i复制以下内容到文件中
 ```
@@ -241,7 +241,7 @@ launch worldserver
 ```
 创建关闭文本
 ```
-vim 关闭名称.sh
+vim stop.sh  #可以自定义名称
 ```
 复制以下内容到文件中
 ```
@@ -259,11 +259,11 @@ cd azeroth-server/bin/
 ```
 启动服务器
 ```
-./启动名称.sh
+./start.sh  
 ```
 关闭服务器
 ```
-./关闭名称.sh
+./stop.sh
 ```
 以上这种快速启动方法启动后无法进入AC后台所以需要优先创建GM账号进行之后的操作
 
