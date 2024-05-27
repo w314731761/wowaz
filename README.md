@@ -141,10 +141,17 @@ Mysql下查看是否创建成功
 ```
 show databases;
 ```
-Root权限进入 sudo vi /etc/mysql/mysql.conf.d 或者 使用宝塔文件浏览器，进入 /etc/mysql/mysql.conf.d 目录修改 mysqld.cnf 文件，把 
-按i开始进行编辑
+Root权限进入 
+```
+sudo vi /etc/mysql/mysql.conf.d
+```
+或者使用宝塔文件浏览器，进入 /etc/mysql/mysql.conf.d 目录修改 mysqld.cnf 文件。
+
+按i开始进行编辑以下项目
+```
 bind-address            = 0.0.0.0
 mysqlx-bind-address     = 0.0.0.0
+```
 修改后按ESC 后输入 :wq 退出
 
 打开Ubuntu 防火墙打开3306，3724，8085端口
