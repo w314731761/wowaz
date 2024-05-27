@@ -154,23 +154,20 @@ mysqlx-bind-address     = 0.0.0.0
 ```
 修改后按ESC 后输入 :wq 退出
 
-打开Ubuntu 防火墙打开3306，3724，8085端口
+防火墙打开3306，3724，8085端口
 ```
 sudo ufw allow 3306
 sudo ufw allow 3724
 sudo ufw allow 8085
 ```
 
-在终端重启MySQL服务
+重启MySQL服务
 ```
 sudo systemctl restart mysql
 ```
-打开 heidisql 、进行服务器连接
-
 以下是启动服务器  进入
 ```
 cd ~/azeroth-server/bin/
-
 ```
 启动 authserver worldserver 两个窗口分别运行
 ```
