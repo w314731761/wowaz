@@ -6,8 +6,6 @@
 ```
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
-
-
 在用户目录下 创建一个目录输入 mkdir dev 用于存放代码
 
 ```
