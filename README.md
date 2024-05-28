@@ -26,7 +26,7 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
 cd ~/dev/azerothcore-wotlk/modules
 ```
-克隆 mod 代码，按需使用。
+克隆 mod 代码，按需使用，编译的时候将会一起编译进去。
 ```
 git clone https://github.com/azerothcore/mod-eluna.git  #lua脚本模块
 git clone https://github.com/azerothcore/mod-anticheat.git  #防作弊模块
