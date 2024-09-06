@@ -67,10 +67,7 @@ cd ~/dev/azerothcore-wotlk/build/  #在该目录下进行编译
 ```
 make -j 4   #开始编译
 ```
-安装
-```
 编译完成后输入make install进行安装
-```
 ```
 make install
 ```
